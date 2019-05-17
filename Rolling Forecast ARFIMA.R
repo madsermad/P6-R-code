@@ -109,7 +109,7 @@ for(i in vec){
     forel[i+j] <- forecast(refit, h=h)$lower[j+1,2]
   }
 }
-ts.plot(fdiff,xlim = c(1800,1950),ylim = c(-400,400), ylab = "Prices", main = "14 days forecasting of AFIRMA")
+ts.plot(fdiff,xlim = c(1800,1950),ylim = c(-400,400), ylab = "Prices", main = "14 days forecasting of ARFIMA")
 x1 <- c(1826:1947)
 y1 <- c(forel)
 y2 <- c(foreu)
