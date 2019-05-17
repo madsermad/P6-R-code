@@ -33,5 +33,5 @@ text(locator(), labels = c("AIC", "BIC")) # Press the graph to add AIC and BIC, 
 # Estimation of an AR(7) model
 arima(ts(dk1f[2]),c(7,0,0),include.mean = FALSE)
 
-# Residual Analysis of an AR(7) model
+# Residual analysis of an AR(7) model
 sarima(ts(dk1f[2]),7,0,0,no.constant = TRUE)
