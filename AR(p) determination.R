@@ -30,7 +30,7 @@ lines(bic, col = "red") # The BIC
 points(7,min(bic)); points(7,aic[7]); points(12,aic[12]) # Making minimum points
 text(locator(), labels = c("AIC", "BIC")) # Press the graph to add AIC and BIC, then press esc.
 
-# Estimation of an AR(7) model
+# Estimation of an AR(7) model 
 arima(ts(dk1f[2]),c(7,0,0),include.mean = FALSE)
 
 # Residual analysis of an AR(7) model
