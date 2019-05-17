@@ -3,6 +3,7 @@ library(tseries)
 library(readxl)
 library(astsa)
 library(fracdiff)
+library(forecast)
 
 ### Beforehand definitions
 Eldaily2014_18 <- read_excel("Eldaily2014-2018.xlsx", 
