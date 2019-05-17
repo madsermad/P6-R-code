@@ -40,7 +40,7 @@ for (p in 0:4){
 # Estimation of MSARFIMA(p,d,q) x (P,D,Q)_s
 print(best_fit)
 
-# Residual analysis 
+# Residual analysis of MSARFIMA(1,0.49,2)x(0,1,1)_7
 sarima(ts(dk1f_frac_diff,frequency = 7),1,0,2,0,1,1,7,no.constant = TRUE)
 
 
