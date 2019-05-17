@@ -17,12 +17,13 @@ colnames(Eldaily2014_18)[1] <- "Date"
 dk1f <- Eldaily2014_18[1:2] 
 dk1f[2] <- dk1f[2]-mean(unlist(dk1f[2])) # We are working with this 
 
+# The actual values for 2019
 Eldaily2019 <- read_excel("Eldaily2019.xlsx", 
                           col_types = c("numeric", "blank", "blank", 
                                         "blank", "blank", "blank", "blank", 
                                         "numeric", "numeric", "blank", "blank", 
                                         "blank", "blank", "blank", "blank", 
-                                        "blank", "blank", "blank"))
+                                        "blank", "blank", "blank")) # Load dataset
 colnames(Eldaily2019)[1] <- "Date"
 dk1f19 <- Eldaily2019[1:2]
 dk1f19[2] <- dk1f19[2]-mean(unlist(dk1f19[2]))
