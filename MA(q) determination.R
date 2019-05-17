@@ -33,5 +33,5 @@ text(locator(), labels = c("AIC", "BIC"))
 ### Estimate the MA(9) model
 arima(ts(dk1f[2]),c(0,0,9),include.mean = FALSE) # MA(9)
 
-### Residual Analysis of MA(9) (figure 4.6)
+### Residual analysis of MA(9) (figure 4.6)
 sarima(ts(dk1f[2]),0,0,9, no.constant = TRUE)
