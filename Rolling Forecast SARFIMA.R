@@ -38,7 +38,7 @@ foreu <- ts(numeric(n), start=1826)
 forel <- ts(numeric(n), start=1826)
 
 for(i in 1:n){  
-  x <- window(c(ts(fdiff,frequency = 7),ts(dk1f19[2],frequency = 7)), end=1825 + (i-1),start = 1)
+  x <- window(c(ts(fdiff,frequency = 7),ts(dk1f19[2],frequency = 7)), end=1825 + (i-1),start = 1+ (i-1))
   refit <- Arima(x, model=fit)
   fc1_sarf3[i] <- forecast(refit, h=h)$mean[1]
   foreu[i] <- forecast(refit, h=h)$upper[2]
@@ -68,7 +68,7 @@ for (i in 1:20) {
   vec <- c(vec,i+(6*i))
 }
 for(i in vec){  
-  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1)
+  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1+ (i-1))
   refit <- Arima(x, model=fit)
   for (j in 0:6) {
     fc7_sarf3[i+j] <- forecast(refit, h=h)$mean[j+1]
@@ -101,7 +101,7 @@ for (i in 1:20) {
   vec <- c(vec,i+(13*i))
 }
 for(i in vec){  
-  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1)
+  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1+ (i-1))
   refit <- Arima(x, model=fit)
   for (j in 0:13) {
     fc14_sarf3[i+j] <- forecast(refit, h=h)$mean[j+1]
@@ -133,7 +133,7 @@ for (i in 1:20) {
   vec <- c(vec,i+(20*i))
 }
 for(i in vec){  
-  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1)
+  x <- window(c(ts(fdiff,frequency = 7),ts(fdiff19,frequency = 7)), end=1825 + (i-1),start = 1+ (i-1))
   refit <- Arima(x, model=fit)
   for (j in 0:20) {
     fc21_sarf3[i+j] <- forecast(refit, h=h)$mean[j+1]
